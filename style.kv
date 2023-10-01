@@ -1,0 +1,17 @@
+<Style>:
+    filechooser:filechooser
+    orientation:'vertical'
+
+    MDTopAppBar:
+        title:''
+        left_action_items:[['information-slab-circle',lambda x:root.about(),'About']]
+        size_hint:1,0.083
+        
+        Image:
+            source:'fly.jpg'
+
+    FileChooserIconView:
+        id:filechooser
+
+        on_selection:root.select(filechooser.selection)
+
